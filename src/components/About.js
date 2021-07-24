@@ -115,7 +115,7 @@ export default function About() {
     //     }}
     //   />
     <main className='bg-blue-100 min-h-screen p-12'>
-      <div className='p-8 lg:pt-36 container mx-auto relative'>
+      <div className='p-4 lg:pt-36 container mx-auto relative'>
         <section className='bg-white bg-opacity-80 rounded-lg shadow-2xl lg:flex p-10'>
           <img
             src={urlFor(author.authorImage).url()}

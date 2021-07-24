@@ -28,7 +28,8 @@ export default function SinglePost() {
         },
         body,
         "name": author->name,
-        "authorImage": author->image
+        "authorImage": author->image,
+        publishedAt
       }`
       )
       .then((data) => setSinglePost(data[0]))
@@ -40,13 +41,15 @@ export default function SinglePost() {
   }
 
   return (
-    <main className='bg-gray-200 min-h-screen p-12'>
+    <main className='bg-gray-200 min-h-screen p-10'>
       <article className='container shadow-lg mx-auto bg-green-100 rounded-lg'>
         <header className='relative'>
           <div className='absolute h-full w-full flex items-center justify-center p-8'>
-            <div className='bg-white bg-opacity-80 rounded p-12'>
-              <h1 className='text-3xl lg:text-6xl mb-4'>{singlePost.title}</h1>
-              <div className='flex justify-center text-gray-800'>
+            <div className='bg-white bg-opacity-80 rounded p-10'>
+              <h1 className='lg:text-3xl md: text-2xl mb-4 flex justify-center'>
+                {singlePost.title}
+              </h1>
+              <div className='flex justify-center text-gray-800 mb-4'>
                 <img
                   src={urlFor(singlePost.authorImage).url()}
                   className='w-10 h-10 rounded-full'
@@ -54,6 +57,12 @@ export default function SinglePost() {
                 <p className='flex items-center pl-2 text-2xl'>
                   {singlePost.name}
                 </p>
+              </div>
+              <div className='text-gray-500 text-sm md:text-xs'>
+                <span>
+                  <strong className='font-bold'>Published on</strong>:{' '}
+                  {new Date(singlePost.publishedAt).toLocaleDateString()}
+                </span>
               </div>
             </div>
           </div>
@@ -66,7 +75,7 @@ export default function SinglePost() {
             }}
           />
         </header>
-        <div className='px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full'>
+        <div className='px-10 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full sm:py-4'>
           <BlockContent
             blocks={singlePost.body}
             projectId='f7olvu4h'
