@@ -58,7 +58,7 @@ export default function SinglePost() {
             </div>
           </div>
           <img
-            src={singlePost.mainImage.asset.url}
+            // src={singlePost.mainImage.asset.url}   // PULLS IMG FROM SANITY
             className='rounded align-middle'
             style={{
               height: '300px',
