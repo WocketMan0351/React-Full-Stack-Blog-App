@@ -123,7 +123,7 @@ export default function About() {
           />
           <div className='text-md flex flex-col justify-center'>
             <h1 className='text-2xl text blue 300 mb-3'>
-              Sup dude, I'm <span>{author.name} bitch!!</span>
+              Hey, I'm <span>{author.name}!</span>
             </h1>
             <div className='prose lg:prose-xl'>
               <BlockContent
