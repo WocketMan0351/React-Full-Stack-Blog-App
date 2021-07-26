@@ -15,13 +15,13 @@ export default function NavBar() {
           >
             <img
               src={logo}
-              className='lg:w-16 lg:h-16 md:w-16 md:h-16 w-12 h-12'
+              className='lg:w-16 lg:h-16 md:w-16 md:h-16 w-12 h-12 hidden md:block'
             />
           </NavLink>
           <NavLink
             to='/'
             exact
-            className='inflex-flex flex justify-center items-center py-6 px-0 sm:px-3 mr-3 text-white hover:text-gray-900 sm:text-3xl font-bold sans-serif tracking-widest'
+            className='inline-flex items-center py-3 px-3 my-6 rounded text-white hover:text-gray-900'
           >
             Home
           </NavLink>
@@ -45,6 +45,13 @@ export default function NavBar() {
             className='inline-flex items-center py-3 px-3 my-6 rounded text-white hover:text-gray-900'
           >
             About
+          </NavLink>
+          <NavLink
+            to='/business'
+            activeClassName='bg-blue-700'
+            className='inline-flex items-center py-3 px-3 my-6 rounded text-white hover:text-gray-900'
+          >
+            Sovereign Businesses
           </NavLink>
         </nav>
         <div className='inline-flex flex justify-center py-3 px-3 my-6'>

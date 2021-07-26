@@ -5,6 +5,8 @@ import SinglePost from './components/SinglePost';
 import Post from './components/Post';
 import Video from './components/Video';
 import NavBar from './components/NavBar';
+import Business from './components/Business';
+import SingleBusiness from './components/SingleBusiness';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route component={SinglePost} path='/post/:slug' />
         <Route component={Post} path='/post' />
         <Route component={Video} path='/video' />
+        <Route component={Business} path='/business' />
+        <Route component={SingleBusiness} path='/business/:slug' />
       </Switch>
     </BrowserRouter>
   );
