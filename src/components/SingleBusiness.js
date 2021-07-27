@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import sanityClient from '../client';
 import BlockContent from '@sanity/block-content-to-react';
+import { VscCheck } from 'react-icons/vsc';
+import { VscClose } from 'react-icons/vsc';
 
 export default function SingleBusiness() {
   const [singleBusiness, setSingleBusiness] = useState(null);
@@ -31,10 +33,45 @@ export default function SingleBusiness() {
     return <div className='flex justify-center text-3xl'>Loading...</div>;
   }
 
-  if (singleBusiness) {
-    onChain = `${singleBusiness.acceptsOnChain}`;
-    lightning = `${singleBusiness.acceptsLightning}`;
+  if (singleBusiness.acceptsOnChain) {
+    onChain = true;
   }
+
+  if (singleBusiness.acceptsLightning) {
+    lightning = true;
+  }
+
+  const onChainIsTrue = (onChain) => {
+    if (onChain) {
+      return (
+        <VscCheck
+          color='green'
+          size={24}
+          className='flex justify-center ml-3'
+        />
+      );
+    } else {
+      return (
+        <VscClose color='red' size={24} className='flex justify-center ml-3' />
+      );
+    }
+  };
+
+  const lightningIsTrue = (lightning) => {
+    if (lightning) {
+      return (
+        <VscCheck
+          color='green'
+          size={24}
+          className='flex justify-center ml-3'
+        />
+      );
+    } else {
+      return (
+        <VscClose color='red' size={24} className='flex justify-center ml-3' />
+      );
+    }
+  };
 
   return (
     <main className='bg-gray-200 min-h-screen p-10'>
@@ -73,8 +110,10 @@ export default function SingleBusiness() {
             <h2>Accepted Payment Methods: </h2>
           </div>
           <div className='flex justify-evenly mx-20 py-2'>
-            <p className='inline'>Lightning: {lightning}</p>
-            <p className='inline'>On-Chain: {onChain}</p>
+            <p className='flex inline'>
+              Lightning: {lightningIsTrue(lightning)}
+            </p>
+            <p className='flex inline'>On-Chain: {onChainIsTrue(onChain)} </p>
           </div>
         </div>
         <div className='px-10 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full sm:py-4'>

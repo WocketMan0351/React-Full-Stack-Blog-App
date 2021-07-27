@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
 import logo from '../images/btc.png';
+import { BiBitcoin } from 'react-icons/bi';
 
 export default function NavBar() {
   return (
@@ -51,7 +52,9 @@ export default function NavBar() {
             activeClassName='bg-blue-700'
             className='inline-flex items-center py-3 px-3 my-6 mr-6 rounded text-white hover:text-gray-900'
           >
-            Sovereign Businesses
+            Sovereign
+            <BiBitcoin style={{ marginRight: -3 }} size={18} />
+            usinesses
           </NavLink>
         </nav>
         <div className='hidden sm:inline-flex flex justify-center py-3 px-3 my-6'>
