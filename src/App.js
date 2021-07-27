@@ -18,8 +18,8 @@ function App() {
         <Route component={SinglePost} path='/post/:slug' />
         <Route component={Post} path='/post' />
         <Route component={Video} path='/video' />
-        <Route component={Business} path='/business' />
         <Route component={SingleBusiness} path='/business/:slug' />
+        <Route component={Business} path='/business' />
       </Switch>
     </BrowserRouter>
   );

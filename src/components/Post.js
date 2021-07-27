@@ -24,6 +24,10 @@ export default function Post() {
       .catch(console.error);
   }, []);
 
+  if (!postData) {
+    return <div className='flex justify-center text-3xl'>Loading...</div>;
+  }
+
   return (
     <main className='bg-blue-100 min-h-screen p-12'>
       <section className='container mx-auto'>

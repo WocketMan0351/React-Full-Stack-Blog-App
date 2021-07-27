@@ -28,7 +28,7 @@ export default function NavBar() {
           <NavLink
             to='/post'
             activeClassName='bg-blue-700'
-            className='inline-flex items-center py-3 px-3 my-6 rounded text-white hover:text-gray-900'
+            className='inline-flex items-center py-2 px-2 my-6 rounded text-white hover:text-gray-900'
           >
             Articles
           </NavLink>
@@ -49,12 +49,12 @@ export default function NavBar() {
           <NavLink
             to='/business'
             activeClassName='bg-blue-700'
-            className='inline-flex items-center py-3 px-3 my-6 rounded text-white hover:text-gray-900'
+            className='inline-flex items-center py-3 px-3 my-6 mr-6 rounded text-white hover:text-gray-900'
           >
             Sovereign Businesses
           </NavLink>
         </nav>
-        <div className='inline-flex flex justify-center py-3 px-3 my-6'>
+        <div className='hidden sm:inline-flex flex justify-center py-3 px-3 my-6'>
           <SocialIcon
             className='mr-4'
             style={{ height: 30, width: 30 }}
@@ -66,9 +66,25 @@ export default function NavBar() {
           <SocialIcon
             className='mr-4'
             style={{ height: 30, width: 30 }}
-            network='telegram'
+            network='youtube'
             fgColor='white'
-            url='http://t.me/'
+            url='https://www.youtube.com/'
+            target='_blank'
+          />
+          <SocialIcon
+            className='mr-4'
+            style={{ height: 30, width: 30 }}
+            network='instagram'
+            fgColor='white'
+            url='https://www.instagram.com/'
+            target='_blank'
+          />
+          <SocialIcon
+            className='mr-4'
+            style={{ height: 30, width: 30 }}
+            network='facebook'
+            fgColor='white'
+            url='https://www.facebook.com/'
             target='_blank'
           />
         </div>

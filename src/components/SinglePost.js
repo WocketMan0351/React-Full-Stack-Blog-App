@@ -42,10 +42,10 @@ export default function SinglePost() {
 
   return (
     <main className='bg-gray-200 min-h-screen p-10'>
-      <article className='container shadow-lg mx-auto bg-green-100 rounded-lg'>
+      <article className='container shadow-lg mx-auto bg-white rounded-lg'>
         <header className='relative'>
           <div className='absolute h-full w-full flex items-center justify-center p-8'>
-            <div className='bg-white bg-opacity-80 rounded p-10'>
+            <div className='bg-blue-100 bg-opacity-80 rounded p-10'>
               <h1 className='lg:text-3xl md: text-2xl mb-4 flex justify-center'>
                 {singlePost.title}
               </h1>

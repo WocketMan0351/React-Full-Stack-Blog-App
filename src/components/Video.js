@@ -21,6 +21,10 @@ export default function Video() {
       .catch(console.error);
   }, []);
 
+  if (!videoData) {
+    return <div className='flex justify-center text-3xl'>Loading...</div>;
+  }
+
   return (
     <main className='bg-blue-100 min-h-screen p-12'>
       <section className='container mx-auto'>
@@ -35,6 +39,7 @@ export default function Video() {
                 <h3 className='text-gray-800 font-bold mb-2 hover:text-blue-700 md:text-xl'>
                   <a
                     href={video.link}
+                    key={index}
                     target='_blank'
                     rel='noopener noreferrer'
                   >
@@ -56,7 +61,7 @@ export default function Video() {
                   <a
                     href={video.link}
                     target='_blank'
-                    rel='noopener no referrer'
+                    rel='noopener noreferrer'
                     className='text-blue-500 font-bold hover:underline hover:text-blue-400 flex justify-center text-xl'
                   >
                     Watch on YouTube{' '}

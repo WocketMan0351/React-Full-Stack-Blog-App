@@ -18,12 +18,17 @@ export default function Business() {
       .catch(console.error);
   }, []);
 
+  if (!businessData) {
+    return <div className='flex justify-center text-3xl'>Loading...</div>;
+  }
+
   return (
     <main className='bg-blue-100 min-h-screen p-12'>
       <section className='container mx-auto'>
         <h1 className='text-4xl flex justify-center'>Sovereign Businesses</h1>
         <h2 className='text-lg text-gray-600 flex justify-center my-5'>
-          Arizona businesses who have opted to start accepting sound money!
+          AZ businesses that <strong> &nbsp; want &nbsp; </strong> to be paid in
+          bitcoin!
         </h2>
         <div className='grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-8 lg:grid-cols-3'>
           {businessData &&
