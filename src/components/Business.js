@@ -28,7 +28,7 @@ export default function Business() {
         <h1 className='text-4xl flex justify-center'>Sovereign Businesses</h1>
         <h2 className='text-lg text-gray-600 flex justify-center my-5'>
           AZ businesses that <strong> &nbsp; want &nbsp; </strong> to be paid in
-          bitcoin!
+          BTC!
         </h2>
         <div className='grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 gap-8 lg:grid-cols-3'>
           {businessData &&
